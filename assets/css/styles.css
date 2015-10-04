@@ -1,14 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,600);
 
 body {
-  padding:50px;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#777;
-  font-weight:300;
+  font:16px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#e0e0e0;
+  font-weight: 400;
+  background-image: url('../img/background.jpg');
+  background-attachment: fixed;
+  background-size:cover;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color:#222;
+  color:#fff;
+  font-weight: 400;
   margin:0 0 20px;
 }
 
@@ -20,22 +23,28 @@ h1, h2, h3 {
   line-height:1.1;
 }
 
+h3 {
+  font-weight: 300;
+  text-transform: lowercase;
+}
+h3 > span:first-child {
+  margin-right: .25rem;
+}
+
 h1 {
+  font-weight: 300;
   font-size:28px;
 }
 
-h2 {
-  color:#393939;
-}
-
-h3, h4, h5, h6 {
-  color:#494949;
-}
-
 a {
-  color:#39c;
+  color:#fff;
+  cursor: pointer;
+  border-bottom: 1px dotted transparent;
   font-weight:400;
   text-decoration:none;
+}
+a:hover {
+  border-bottom-color: #fff;
 }
 
 a small {
@@ -97,45 +106,7 @@ img {
 
 header {
   width:270px;
-  float:left;
   position:fixed;
-}
-
-header ul {
-  list-style:none;
-  height:40px;
-
-  padding:0;
-
-  background: #eee;
-  background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
-  background: -webkit-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-
-  border-radius:5px;
-  border:1px solid #d2d2d2;
-  box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
-  width:270px;
-}
-
-header li {
-  width:89px;
-  float:left;
-  border-right:1px solid #d2d2d2;
-  height:40px;
-}
-
-header ul a {
-  line-height:1;
-  font-size:11px;
-  color:#999;
-  display:block;
-  text-align:center;
-  padding-top:6px;
-  height:40px;
 }
 
 strong {
@@ -177,12 +148,22 @@ hr {
 }
 
 footer {
-  width:270px;
-  float:left;
-  position:fixed;
-  bottom:50px;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  right:0;
+  width:100%;
+  background-color:#111;
+  color: #aaa;
+  padding: .5rem 0;
+  text-align: center;
 }
-
+footer p {
+  margin: 0;
+}
+.pull-right {
+  float: right;
+}
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
@@ -190,7 +171,7 @@ footer {
     margin:0;
   }
 
-  header, section, footer {
+  header, section {
     float:none;
     position:static;
     width:auto;
