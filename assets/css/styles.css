@@ -2,7 +2,7 @@
 
 body {
   font:16px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#e0e0e0;
+  color:#f0f0f0;
   font-weight: 400;
   background-image: url('../img/background.jpg');
   background-attachment: fixed;
@@ -46,6 +46,7 @@ a {
   border-bottom: 1px dotted transparent;
   font-weight:400;
   text-decoration:none;
+  transition: .25s;
 }
 a:hover {
   border-bottom-color: #fff;
@@ -56,6 +57,10 @@ a small {
   color:#777;
   margin-top:-0.6em;
   display:block;
+}
+
+ul {
+  padding-left: 20px;
 }
 
 .wrapper {
@@ -118,16 +123,6 @@ strong {
   font-weight:700;
 }
 
-header ul li + li {
-  width:88px;
-  border-left:1px solid #fff;
-}
-
-header ul li + li + li {
-  border-right:none;
-  width:89px;
-}
-
 header ul a strong {
   font-size:14px;
   display:block;
@@ -137,7 +132,7 @@ header ul a strong {
 section {
   width:500px;
   float:right;
-  padding-bottom:50px;
+  padding-bottom:2rem;
 }
 
 small {
@@ -168,11 +163,26 @@ footer p {
 .pull-right {
   float: right;
 }
+.button {
+  padding: .5rem 1rem;
+  text-transform: uppercase;
+  border: 1px solid white;
+  border-radius: .15rem;
+  transition: all .5s;
+}
+.button:hover {
+  background-color: white;
+  color: #999;
+}
 @media print, screen and (max-width: 960px) {
 
   div.wrapper {
     width:auto;
     margin:0;
+  }
+
+  body {
+    padding: 0 1rem;
   }
 
   header, section {
@@ -186,7 +196,6 @@ footer p {
   }
 
   section {
-    border:1px solid #e5e5e5;
     border-width:1px 0;
     padding:20px 0;
     margin:0 0 20px;
